@@ -1,0 +1,10 @@
+_G.toggle = true -- turn to false and re-execute if u wanna turn the farm off
+while _G.toggle == true do
+for i,v in pairs(game.Workspace.Treasures:GetChildren()) do
+    if v:IsA("MeshPart") then
+        if _G.toggle ~= true then return end
+        wait(0.5)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+    end
+    end
+end
